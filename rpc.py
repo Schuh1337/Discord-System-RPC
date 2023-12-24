@@ -8,7 +8,7 @@ RPC = Presence(client)
 RPC.connect()
 
 def get():
-    cores = psutil.cpu_percent(interval=5, percpu=True)
+    cores = psutil.cpu_percent(interval=3, percpu=True)
     cpu = sum(cores) / len(cores) * 1.5
     ram = psutil.virtual_memory().percent
     return cpu, ram
